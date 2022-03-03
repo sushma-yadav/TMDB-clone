@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/TMDB-clone/static/css/main.2d575d74.chunk.css",
+    "main.js": "/TMDB-clone/static/js/main.7566ce8d.chunk.js",
+    "main.js.map": "/TMDB-clone/static/js/main.7566ce8d.chunk.js.map",
+    "runtime-main.js": "/TMDB-clone/static/js/runtime-main.83967988.js",
+    "runtime-main.js.map": "/TMDB-clone/static/js/runtime-main.83967988.js.map",
+    "static/css/2.383c0125.chunk.css": "/TMDB-clone/static/css/2.383c0125.chunk.css",
+    "static/js/2.fd3cdd26.chunk.js": "/TMDB-clone/static/js/2.fd3cdd26.chunk.js",
+    "static/js/2.fd3cdd26.chunk.js.map": "/TMDB-clone/static/js/2.fd3cdd26.chunk.js.map",
+    "index.html": "/TMDB-clone/index.html",
+    "static/css/2.383c0125.chunk.css.map": "/TMDB-clone/static/css/2.383c0125.chunk.css.map",
+    "static/css/main.2d575d74.chunk.css.map": "/TMDB-clone/static/css/main.2d575d74.chunk.css.map",
+    "static/js/2.fd3cdd26.chunk.js.LICENSE.txt": "/TMDB-clone/static/js/2.fd3cdd26.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.83967988.js",
+    "static/css/2.383c0125.chunk.css",
+    "static/js/2.fd3cdd26.chunk.js",
+    "static/css/main.2d575d74.chunk.css",
+    "static/js/main.7566ce8d.chunk.js"
+  ]
+}
