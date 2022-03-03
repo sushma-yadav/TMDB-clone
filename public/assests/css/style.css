@@ -1,0 +1,391 @@
+body a{
+    text-decoration: none;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+::-webkit-scrollbar-track {
+    background: transparent;
+    }
+  
+::-webkit-scrollbar-thumb {
+    background: #cccccc;
+    border-radius: 10px;
+  }
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #cccccc;
+  }
+
+.card-image::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+.card-image::-webkit-scrollbar-track {
+    background: transparent;
+    }
+  
+.card-image::-webkit-scrollbar-thumb {
+    background: #cccccc;
+    border-radius: 10px;
+  }
+  
+.card-image::-webkit-scrollbar-thumb:hover {
+    background: #cccccc;
+  }
+
+.trailer::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+.trailer::-webkit-scrollbar-track {
+    background: transparent;
+    }
+  
+.trailer::-webkit-scrollbar-thumb {
+    background: #cccccc;
+    border-radius: 10px;
+  }
+  
+.trailer::-webkit-scrollbar-thumb:hover {
+    background: #cccccc;
+  }
+
+
+/*navabr*/
+.navbar{
+    background-color: #032541;
+    width: 100%;
+    height: 64px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.nav-item a{
+    color: #fff;
+    font-weight: 600;
+}
+
+.nav-item a:hover{
+    color: #fff;
+}
+
+.navbar-brand img{
+    height: 20px;
+}
+
+.dropdown-menu{
+    width: 174px;
+}
+
+.dropdown-menu li{
+    padding-left: 20px;
+}
+
+.dropdown-menu li .dropdown-item{
+    color: #000;
+    font-weight: 400;
+}
+
+.navbar-nav .nav-item{
+    margin: 0 6px;
+}
+
+.navbar-nav .nav-item .nav-link button{
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 2px 9px;
+}
+
+.navbar-collapse ul:nth-child(2) .nav-item{
+    font-size: 1.4em;
+    margin: 0 12px;
+}
+
+/*banner*/
+
+
+.banner .banner-image img{
+    width: 100%;
+    min-height: 300px;
+    position: relative;
+    max-height: 360px;
+   
+}
+
+.title{
+    position: absolute;
+    top: 140px;
+    left: 30px;
+}
+.banner .title h2{
+    font-size: 3em;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+}
+.banner .title h3{
+    font-size: 2em;
+    font-weight: 600;
+    color: #fff;
+}
+
+.banner .search{
+    position: absolute;
+    top: 290px;
+}
+.banner .search form{
+    position: absolute;
+    left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.banner .search form label input[type=text]{
+    width: 1130px;
+    border-radius: 30px;
+    border: none;
+    padding: 10px 20px;
+    color: rgba(0,0,0,0.5);
+    height: 46px;
+    font-size: 1.1em;
+}
+
+.banner .search form input[type=submit]{
+    border: none;
+    border-radius: 30px;
+    /* background: linear-gradient(to right, rgba(var(--tmdbLightGreen), 1) 0%, rgba(var(--tmdbLightBlue), 1) 100%); */
+    padding: 10px 26px;
+    color: #fff;
+    font-weight: 700;
+    position: absolute;
+    right: -1px;
+    height: 46px;
+    background: linear-gradient(to right, #00ffcc 0%, #66ffff 100%)
+}
+
+/*footer*/
+
+.footer-bg{
+    background-color: #032541;
+}
+
+.footer-bg h3{
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.4em;
+    margin-bottom: -20px;
+}
+
+.footer-bg ul li a{
+    color: #fff;
+    font-size: 1.2em;
+}
+
+.footer{
+    padding: 80px 0;
+}
+
+.footer-logo img{
+    width: 130px;
+    height: 94px;
+    margin-top: -25px;
+    float: right;
+}
+
+.footer-bg button{
+    color: #01b4e4;
+    font-size: 1.3em;
+    font-weight: bold;
+    border: 2px solid #01b4e4;
+    border-radius: 5px;
+    margin-top: 40px;
+    float: right;
+}
+
+.footer-bg ul {
+    list-style-type: none;
+    display: inline;
+}
+
+.footer-bg ul li{
+    line-height: 1.6em;
+    max-width: 260px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #fff;
+}
+
+/*whats popular*/
+.mar-l{
+    margin-left: 40px;
+}
+.column .column-header h2{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.column-header{
+    position: relative;
+    padding-left: 15px;
+}
+
+.card-image{
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    /* margin-left: 30px; */
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+.slideimg{
+    width: 100%;
+    height:400px;
+}
+.card-image .image{
+    position: relative;
+}
+
+.card-image .image a img{
+    height: 250px;
+    padding: 12px;
+    border-radius: 12%;
+}
+
+
+.option{
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #000;
+    position: absolute;
+    top: 23px;
+    right: 15px;
+    opacity: 0.2;
+    z-index: 4;
+}
+
+.column-header .category{
+    display: flex;
+    justify-content: start;
+    position: absolute;
+    top: 0;
+    left: 200px;
+    border: 1px solid #000;
+    border-radius: 30px;
+}
+
+.column-header .category h3{
+    display: inline-flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    padding: 4px 20px;
+    margin-bottom: 0 !important;
+}
+
+.card-image .image h2{
+    font-size: 1em;
+    margin: 0;
+    width: 100%;
+    word-wrap: normal;
+    overflow-wrap: break-word;
+}
+
+.card-image .image h2 a{
+    color: #000;
+    font-weight: 700;
+}
+.card-image .image p{
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    color: rgba(0,0,0,0.6);
+}
+
+/* .column{
+    background-image: url('../images/background-image.jpg');
+} */
+
+
+
+
+/*latest trailer*/
+.bg-image{
+    background-image: url('../images/background-image.jpg');
+    width: 100%;
+    height: 400px; 
+    background-size: cover;
+    margin: 20px 0;
+}
+
+.pos-top{
+    top: 20px;
+}
+
+.pos-top h2, .pos-top .category h3{
+    color: #fff;
+}
+
+.pos-top .category{
+    border: 1px solid green;
+}
+
+.trailer{
+    display: flex;
+    justify-content: start;
+    overflow: hidden;
+    overflow-x: auto;
+}
+.trailer a img{
+    width: 300px;
+    height: 170px;
+    padding: 12px;
+    border-radius: 20px;
+}
+
+.trailer h2 a, .trailer h3{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+
+.trailer h2 a{
+    font-weight: 600;
+}
+
+.trailer h3{
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.trailer a{
+    position: relative;
+}
+
+.trailer a i{
+    position: absolute;
+    top: -20px;
+    left: 128px;
+    font-size: 4em;
+    color: #fff;
+}
+
+.trailer ul{
+    display: contents;
+}
+
+
+
