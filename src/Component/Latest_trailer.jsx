@@ -1,166 +1,39 @@
 import React from 'react'
+import poster from '../assets/images/play-image.jpg';
 
-function Latest_trailer() {
+function Latest_trailer({ heading, data, category }) {
+
+    const imgUrl = 'https://image.tmdb.org/t/p/w500';
+
     return (
-        <div className="column">
-            <div className="bg-image">
-                <div className="mar-l">
-                    <div className="column-header my-5 pos-top">
-                        <h2>Latest Trailer</h2>
-                        <div className="category">
-                            <h3>in theater</h3>
-                            <h3>on tv</h3>
-                            <h3>movies</h3>
-                            <h3>shows</h3>
-                        </div>
-                    </div>
-                    <div className="trailer">
-                        <ul>
-                            <li>
-                                <a href="">
-                                    <img src="../assests/images/play-image.jpg" alt="" className="image-fluid" />
-                                    <div className="option"></div>
-                                    <i class="fas fa-play"></i>
-                                </a>
-                                <div className="content">
-                                    <h2>
-                                        <a href="#">sushma yadav</a>
-                                    </h2>
-                                    <h3>sushma yadav sushma yadav</h3>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <img src="../assests/images/play-image.jpg" alt="" className="image-fluid" />
-                                    <div className="option"></div>
-                                    <i class="fas fa-play"></i>
-                                </a>
-                                <div className="content">
-                                    <h2>
-                                        <a href="#">sushma yadav</a>
-                                    </h2>
-                                    <h3>sushma yadav sushma yadav</h3>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <img src="../assests/images/play-image.jpg" alt="" className="image-fluid" />
-                                    <div className="option"></div>
-                                    <i class="fas fa-play"></i>
-                                </a>
-                                <div className="content">
-                                    <h2>
-                                        <a href="#">sushma yadav</a>
-                                    </h2>
-                                    <h3>sushma yadav sushma yadav</h3>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <img src="../assests/images/play-image.jpg" alt="" className="image-fluid" />
-                                    <div className="option"></div>
-                                    <i class="fas fa-play"></i>
-                                </a>
-                                <div className="content">
-                                    <h2>
-                                        <a href="#">sushma yadav</a>
-                                    </h2>
-                                    <h3>sushma yadav sushma yadav</h3>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <img src="../assests/images/play-image.jpg" alt="" className="image-fluid" />
-                                    <div className="option"></div>
-                                    <i class="fas fa-play"></i>
-                                </a>
-                                <div className="content">
-                                    <h2>
-                                        <a href="#">sushma yadav</a>
-                                    </h2>
-                                    <h3>sushma yadav sushma yadav</h3>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <img src="../assests/images/play-image.jpg" alt="" className="image-fluid" />
-                                    <div className="option"></div>
-                                    <i class="fas fa-play"></i>
-                                </a>
-                                <div className="content">
-                                    <h2>
-                                        <a href="#">sushma yadav</a>
-                                    </h2>
-                                    <h3>sushma yadav sushma yadav</h3>
-                                </div>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <img src="../assests/images/play-image.jpg" alt="" className="image-fluid" />
-                                    <div className="option"></div>
-                                    <i class="fas fa-play"></i>
-                                </a>
-                                <div className="content">
-                                    <h2>
-                                        <a href="#">sushma yadav</a>
-                                    </h2>
-                                    <h3>sushma yadav sushma yadav</h3>
-                                </div>
-                            </li>
-                        </ul>
-
-
-
-
-
-                        {/* <a href="">
-                            <img src="../assests/images/play-image.jpg" alt="" className="image-fluid" />
-                            <div className="option"></div>
-                            <i class="fas fa-play"></i>
-                        </a>
-                        <div className="content">
-                            <h2>
-                                <a href="#">sushma yadav</a>
-                            </h2>
-                            <h3>sushma yadav sushma yadav</h3>
-                        </div>
-                        <a href="">
-                            <img src="../assests/images/play-image.jpg" alt="" className="image-fluid" />
-                            <div className="option"></div>
-                            <i class="fas fa-play"></i>
-                        </a>
-                        <div className="content">
-                            <h2>
-                                <a href="#">sushma yadav</a>
-                            </h2>
-                            <h3>sushma yadav sushma yadav</h3>
-                        </div>
-                        <a href="">
-                            <img src="../assests/images/play-image.jpg" alt="" className="image-fluid" />
-                            <div className="option"></div>
-                            <i class="fas fa-play"></i>
-                        </a>
-                        <div className="content">
-                            <h2>
-                                <a href="#">sushma yadav</a>
-                            </h2>
-                            <h3>sushma yadav sushma yadav</h3>
-                        </div>
-                        <a href="">
-                            <img src="../assests/images/play-image.jpg" alt="" className="image-fluid" />
-                            <div className="option"></div>
-                            <i class="fas fa-play"></i>
-                        </a>
-                        <div className="content">
-                            <h2>
-                                <a href="#">sushma yadav</a>
-                            </h2>
-                            <h3>sushma yadav sushma yadav</h3>
-                        </div> */}
+        <div className='container'>
+            <div className='bg-image'>
+                <div className="heading pt-5 pb-3 text-light">
+                    <h2>{heading}</h2>
+                    <div className="category">
+                        {
+                            category.map((movie_category) => (
+                                <h3>{movie_category}</h3>
+                            ))
+                        }
                     </div>
                 </div>
+                <div className='trailers'>
+                    {
+                        data.map((movie) => (
+                            <div className='trailer'>
+                                <div className='poster'>
+                                    <img src={imgUrl + movie.poster_path} alt="" className="image-fluid mt-3" />
+                                    <i class="fas fa-play"></i>
+                                    <div className="option"></div>
+                                    <h2 className='text-light mt-3'>{movie.title != null ? movie.title : movie.original_name}</h2>
+                                    <h3 className='text-light mb-5'>{movie.media_type}</h3>
+                                </div>
+                            </div>
+                        ))
+                    }
+                </div>
             </div>
-
         </div>
     )
 }
