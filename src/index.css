@@ -2,6 +2,11 @@ body a{
   text-decoration: none;
 }
 
+.card{
+  box-shadow: 0 2px 8px rgb(0 0 0 / 10%);
+  border: 1px solid #E3E3E3;
+  border-radius: 0;
+}
 
 ::-webkit-scrollbar {
   width: 10px;
@@ -83,11 +88,8 @@ body a{
   width: 174px;
 }
 
-.dropdown-menu li{
+.dropdown-menu .dropdown-item{
   padding-left: 20px;
-}
-
-.dropdown-menu li .dropdown-item{
   color: #000;
   font-weight: 400;
 }
@@ -198,7 +200,7 @@ body a{
 .heading h2{
   font-size: 1.5em;
   font-weight: 600;
-  padding: 0 20px 0 12px;
+  padding: 0 20px;
 }
 
 .card-image{
@@ -319,5 +321,118 @@ body a{
 }
 
 
+/*-----------------------Movie Description-----------------------------*/
+
+.movie-background{
+  background: linear-gradient(to right, rgba(31.5, 31.5, 31.5, 1) 150px, rgba(31.5, 31.5, 31.5, 0.84) 100%), url(./assets/images/movie-background.jpg);
+}
+
+.movie-image{
+  border-radius: 8px;
+}
+
+.name{
+  font-weight: 700;
+}
+.name span{
+  opacity: 0.8;
+  font-weight: 400;
+}
+.movie-content{
+  color: #fff;
+}
+
+.facts p{
+  margin-right: 7px;
+}
+
+.facts :nth-child(1){
+  border: 1px solid #ffffff99;
+  padding: 0 3px;
+  color: #ffffff99;
+}
+
+.fav-icons{
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.fav-icons i{
+  background-color: #032541;
+  height: 46px;
+  width: 46px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-right: 20px;
+}
+
+.tagline{
+  font-size: 1.1em;
+  font-weight: 400;
+  font-style: italic;
+  opacity: 0.7;
+}
+
+.profile p:nth-child(1){
+  margin: 0;
+  font-weight: bold;
+}
+
+.profile p:nth-child(2){
+  font-size: 0.9em;
+}
+
+
+/*---------------series cast--------------------*/
+.headline{
+  font-weight: 600;
+  font-size: 1.4em;
+  margin-bottom: 20px;
+}
+
+.cast{
+  display: flex;
+  text-align: center;
+}
+
+.cast-face{
+  min-width: 138px;
+  width: 138px;
+  height: 175px;
+  display: block;
+}
+
+.card-face img{
+  height: 100%;
+  width: 100%;
+}
+
+
+/*--------------popular people------------*/
+
+.page-heading{
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.popular-faces{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  grid-gap: 25px;
+  padding-bottom: 25px;
+  
+}
+
+.popular p{
+  font-weight: 600;
+  font-size: 1.1em;
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+  color: #000;
+}
 
 

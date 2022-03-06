@@ -24,18 +24,18 @@ function Navbar() {
               </ul>
             </li>
             <li className="nav-item dropdown">
-              <NavLink to="/tvshows" className="nav-link">TV Shows</NavLink>
+            <a className="nav-link" href="#" id="" role="button" data-bs-toggle="dropdown" aria-expanded="false">TV shows</a>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a className="dropdown-item" href="#">Popular</a></li>
-                <li><a className="dropdown-item" href="#">Airing Today</a></li>
+                <NavLink to="/tvshows" className="dropdown-item" href="#">Airing Today</NavLink>
                 <li><a className="dropdown-item" href="#">On TV</a></li>
                 <li><a className="dropdown-item" href="#">Top Rated</a></li>
               </ul>
             </li>
             <li className="nav-item dropdown">
-              <NavLink to="/people" className="nav-link">People</NavLink>
+            <a className="nav-link" href="#" id="" role="button" data-bs-toggle="dropdown" aria-expanded="false">Popular</a>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a className="dropdown-item" href="#">Popular People</a></li>
+              <NavLink to="/popularpeople" className="dropdown-item" href="#">Popular People</NavLink>
               </ul>
             </li>
             <li className="nav-item dropdown">

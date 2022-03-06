@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-bootstrap';
 
 
 function Whats_popular({ heading, data, category }) {
@@ -21,9 +22,9 @@ function Whats_popular({ heading, data, category }) {
                 {
                     data.map((movie) => (
                         <div className="image mt-3">
-                            <a href="#">
+                            <NavLink href="/moviedescription">
                                 <img src={imgUrl + movie.poster_path} alt="" className="image-fluid" />
-                            </a>
+                            </NavLink>
                             <h2>{movie.title != null ? movie.title : movie.original_name}</h2>
                             <p>{movie.release_date != null ? movie.release_date : movie.first_air_date}</p>
                             {/* <div className="option"></div> */}

@@ -8,14 +8,20 @@ function Latest_trailer({ heading, data, category }) {
     return (
         <div className='container'>
             <div className='bg-image'>
-                <div className="heading pt-5 pb-3 text-light">
-                    <h2>{heading}</h2>
-                    <div className="category">
-                        {
-                            category.map((movie_category) => (
-                                <h3>{movie_category}</h3>
-                            ))
-                        }
+                <div className="heading pt-5text-light">
+                    <div className='row'>
+                        <div className='col-md-4 col-sm-12 col-xs-12'>
+                            <h2>{heading}</h2>
+                        </div>
+                        <div className='col-md-8 col-sm-12 col-xs-12'>
+                            <div className="category">
+                                {
+                                    category.map((movie_category) => (
+                                        <h3>{movie_category}</h3>
+                                    ))
+                                }
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className='trailers'>
