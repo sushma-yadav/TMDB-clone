@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Banner from './Banner';
 import Whats_popular from './Whats_popular';
 import axios from 'axios';
-import { trending, popular } from './Data';
 import Latest_trailer from './Latest_trailer';
+import Popular from './Popular';
 
 function Home() {
   const category1 = ['Streaming', 'On TV', 'For Rent', 'In Theaters']
@@ -36,13 +36,12 @@ function Home() {
 
   return (
     <div className="Home">
-      {/* <Navbar />   */}
       <Banner />
       <Whats_popular heading="What's Popular" category={category1} data={List} />
       <Whats_popular heading='Free to Watch' category={category2} data={List} />
-      <Latest_trailer heading='Latest Trailers' category={category1} data={trending}/>
+      <Latest_trailer heading='Latest Trailers' category={category1} data={trending} />
       <Whats_popular heading='Trending' category={category3} data={trending} />
-      {/* <Footer /> */}
+
     </div>
   );
 }

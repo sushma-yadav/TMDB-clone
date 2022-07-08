@@ -1,5 +1,5 @@
-import React from 'react'
-import poster from '../assets/images/play-image.jpg';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 function Latest_trailer({ heading, data, category }) {
 
@@ -8,7 +8,7 @@ function Latest_trailer({ heading, data, category }) {
     return (
         <div className='container'>
             <div className='bg-image'>
-                <div className="heading pt-5text-light">
+                <div className="heading pt-5 pb-3 text-light">
                     <div className='row'>
                         <div className='col-md-4 col-sm-12 col-xs-12'>
                             <h2>{heading}</h2>
@@ -29,7 +29,9 @@ function Latest_trailer({ heading, data, category }) {
                         data.map((movie) => (
                             <div className='trailer'>
                                 <div className='poster'>
-                                    <img src={imgUrl + movie.poster_path} alt="" className="image-fluid mt-3" />
+                                    <Link to='/moviedescription'>
+                                        <img src={imgUrl + movie.poster_path} alt="" className="image-fluid mt-3" />
+                                    </Link>
                                     <i class="fas fa-play"></i>
                                     <div className="option"></div>
                                     <h2 className='text-light mt-3'>{movie.title != null ? movie.title : movie.original_name}</h2>
