@@ -21,13 +21,11 @@ function Home() {
     axios.get(popularUrl)
       .then(response => {
         setList(response.data.results)
-        console.log(response.data.results)
       })
 
     axios.get(trendingUrl)
       .then(response => {
         setTrending(response.data.results)
-        console.log(response.data.results)
       })
     return () => {
       // cleanup
