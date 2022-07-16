@@ -1,21 +1,26 @@
 import React from 'react';
-import movieimage from '../assets/images/movie-image.jpg';
+import moment from 'moment';
 
-const Overview = () => {
+const Overview = ({ details }) => {
+
+  const imgUrl = 'https://image.tmdb.org/t/p/w500'
   return (
-    <div className='movie-background'>
+    <div className='movie-background' style={{ background: `linear-gradient(to right, rgba(31.5, 31.5, 31.5, 1) 150px, rgba(31.5, 31.5, 31.5, 0.84) 100%), url('${imgUrl}${details.backdrop_path}')`, backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }} >
       <div className='container'>
         <div className='row py-5'>
           <div className='col-md-3 col-sm-12 col-xs-12'>
-            <img src={movieimage} className="image-fluid movie-image"></img>
+            <img src={imgUrl + details.poster_path} className="image-fluid movie-image" alt=''></img>
           </div>
           <div className='col-md-9 col-sm-12 col-xs-12'>
             <div className='movie-content'>
-              <h2 className='name'>Euphoria <span className=''>(2011)</span></h2>
+              <h2 className='name'>{details.original_title} <span className=''>({moment(details.release_date).format('YYYY')})</span></h2>
               <div className='facts d-flex'>
                 <p>TV-14</p>
-                <p>Drama</p>
-                <p>40m</p>
+                <p>
+                  {/* {details?.genres[0].name} */}
+                  Drama
+                </p>
+                <p>{Math.floor((details.runtime) / 60)}h</p>
               </div>
               <div className='fav-icons'>
                 <i class="fas fa-list"></i>
@@ -23,9 +28,9 @@ const Overview = () => {
                 <i class="fas fa-bookmark"></i>
                 <i class="fas fa-star"></i>
               </div>
-              <h3 className='tagline mb-2'>Nothing is ever black and white</h3>
+              <h3 className='tagline mb-2'>{details.tagline}</h3>
               <h5 className=''>Overview</h5>
-              <p>While running from a drug deal gone bad, Mike Ross, a brilliant young college-dropout, slips into a job interview with one of New York City's best legal closers, Harvey Specter. Tired of cookie-cutter law school grads, Harvey takes a gamble by hiring Mike on the spot after he recognizes his raw talent and photographic memory</p>
+              <p>{details.overview}</p>
               <div className='profile'>
                 <p>Arosh korsh</p>
                 <p>Creator</p>
@@ -34,9 +39,8 @@ const Overview = () => {
           </div>
 
         </div>
-
       </div>
-    </div>
+    </div >
   )
 }
 

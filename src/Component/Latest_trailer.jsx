@@ -1,9 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function Latest_trailer({ heading, data, category }) {
 
     const imgUrl = 'https://image.tmdb.org/t/p/w500';
+
+    const navigate = useNavigate()
+
+    const movieDetailsHandler = (id) => {
+        navigate(`/moviedescription/${id}`)
+    }
 
     return (
         <div className='container'>
@@ -28,10 +34,8 @@ function Latest_trailer({ heading, data, category }) {
                     {
                         data.map((movie) => (
                             <div className='trailer'>
-                                <div className='poster'>
-                                    <Link to='/moviedescription'>
-                                        <img src={imgUrl + movie.poster_path} alt="" className="image-fluid mt-3" />
-                                    </Link>
+                                <div className='poster' style={{ cursor: "pointer" }} onClick={() => { movieDetailsHandler(movie.id) }}>
+                                    <img src={imgUrl + movie.poster_path} alt="" className="image-fluid mt-3" />
                                     <i class="fas fa-play"></i>
                                     <div className="option"></div>
                                     <h2 className='text-light mt-3'>{movie.title != null ? movie.title : movie.original_name}</h2>

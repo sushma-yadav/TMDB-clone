@@ -3,7 +3,6 @@ import Banner from './Banner';
 import Whats_popular from './Whats_popular';
 import axios from 'axios';
 import Latest_trailer from './Latest_trailer';
-import Popular from './Popular';
 
 function Home() {
   const category1 = ['Streaming', 'On TV', 'For Rent', 'In Theaters']
@@ -12,9 +11,11 @@ function Home() {
 
   const [List, setList] = useState([])
   const [trending, setTrending] = useState([])
+  const [freeToWatch, setFreeToWatch] = useState([])
 
   useEffect(() => {
     let popularUrl = 'https://api.themoviedb.org/3/movie/popular?api_key=1e945d2f421edc0fbe6217e79fefca15&language=en-US&page=1'
+    let freeToWatch = 'https://api.themoviedb.org/3/movie/upcoming?api_key=1e945d2f421edc0fbe6217e79fefca15&language=en-US&page=1'
     let trendingUrl = 'https://api.themoviedb.org/3/trending/all/day?api_key=1e945d2f421edc0fbe6217e79fefca15'
 
 
@@ -23,22 +24,23 @@ function Home() {
         setList(response.data.results)
       })
 
+    axios.get(freeToWatch)
+      .then((response) => {
+        setFreeToWatch(response.data.results)
+      })
     axios.get(trendingUrl)
       .then(response => {
         setTrending(response.data.results)
       })
-    return () => {
-      // cleanup
-    }
   }, [])
 
   return (
     <div className="Home">
       <Banner />
       <Whats_popular heading="What's Popular" category={category1} data={List} />
-      <Whats_popular heading='Free to Watch' category={category2} data={List} />
+      <Whats_popular heading='Free to Watch' category={category2} data={freeToWatch} />
       <Latest_trailer heading='Latest Trailers' category={category1} data={trending} />
-      <Whats_popular heading='Trending' category={category3} data={trending} />
+      <Whats_popular heading='Trending' category={category3} data={List} />
 
     </div>
   );

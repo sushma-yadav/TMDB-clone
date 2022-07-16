@@ -1,10 +1,16 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
-
+import { useNavigate } from "react-router-dom";
+import moment from 'moment';
 
 function Whats_popular({ heading, data, category }) {
 
+    const navigate = useNavigate()
+
     const imgUrl = 'https://image.tmdb.org/t/p/w500';
+
+    const movieDetailsHandler = (id) => {
+        navigate(`/moviedescription/${id}`)
+    }
 
     return (
         <div className='container'>
@@ -21,12 +27,12 @@ function Whats_popular({ heading, data, category }) {
             <div className="card-image">
                 {
                     data.map((movie) => (
-                        <div className="image mt-3">
-                            <Link to="/moviedescription">
-                                <img src={imgUrl + movie.poster_path} alt="" className="image-fluid" />
-                            </Link>
+                        <div className="image mt-3" style={{ cursor: "pointer" }} onClick={() => {
+                            movieDetailsHandler(movie.id)
+                        }}>
+                            <img src={imgUrl + movie.poster_path} alt="" className="image-fluid" />
                             <h2 className='movie-name'>{movie.title != null ? movie.title : movie.original_name}</h2>
-                            <p className='movie-date'>{movie.release_date != null ? movie.release_date : movie.first_air_date}</p>
+                            <p className='movie-date'>{moment(movie.release_date != null ? movie.release_date : movie.first_air_date).format('MMM DD, YYYY')}</p>
                             {/* <div className="option"></div> */}
                         </div>
                     ))

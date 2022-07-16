@@ -1,23 +1,20 @@
 import React, { useEffect, useState } from 'react'
-import popularmovie from '../assets/images/popular-movie.jpg';
-import { NavLink } from 'react-bootstrap';
 import axios from 'axios';
+import moment from 'moment';
 
-function Popular({ data }) {
+function Popular() {
 
-    const [popular, setPopular] = useState([])
+    const [popularList, setPopularList] = useState([])
 
     useEffect(() => {
-        let popularUrl = 'https://api.themoviedb.org/3/movie/popular?api_key=1e945d2f421edc0fbe6217e79fefca15&language=en-US&page=1'
+        let popularmovieUrl = 'https://api.themoviedb.org/3/movie/popular?api_key=1e945d2f421edc0fbe6217e79fefca15&language=en-US&page=1'
 
-        axios.get(popularUrl)
-            .then(response => {
-                setPopular(response.data.results)
-                console.log(response.data.results)
-            })
-        return () => {
-            // cleanup
-        }
+        axios.get(popularmovieUrl).then((res) => {
+            setPopularList(res.data.results)
+            console.log(res.data.results, "res.data.results")
+        })
+
+
     }, [])
 
 
@@ -27,7 +24,18 @@ function Popular({ data }) {
             <div className='row my-4'>
                 <div className='col-md-12'>
                     <div className='popular-faces'>
-                        <div className='card'>
+                        {
+                            popularList.map((item) => {
+                                return (
+                                    <div className='card'>
+                                        <img src={imgUrl + item.poster_path} className="movie-card" alt='' />
+                                        <h2 className='movie-name pt-3'>{item.original_title}</h2>
+                                        <p className='movie-date pb-3'>{moment(item.release_date).format("MMM DD, YYYY")}</p>
+                                    </div>
+                                )
+                            })
+                        }
+                        {/* <div className='card'>
                             <img src={popularmovie} className="movie-card" />
                             <h2 className='movie-name pt-3'>Sushma Yadav</h2>
                             <p className='movie-date pb-3'>Sushma Yadav</p>
@@ -56,12 +64,7 @@ function Popular({ data }) {
                             <img src={popularmovie} className="movie-card" />
                             <h2 className='movie-name pt-3'>Sushma Yadav</h2>
                             <p className='movie-date pb-3'>Sushma Yadav</p>
-                        </div>
-                        <div className='card'>
-                            <img src={popularmovie} className="movie-card" />
-                            <h2 className='movie-name pt-3'>Sushma Yadav</h2>
-                            <p className='movie-date pb-3'>Sushma Yadav</p>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>

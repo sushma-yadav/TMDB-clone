@@ -344,12 +344,14 @@ body a {
 
 /*-----------------------Movie Description-----------------------------*/
 
-.movie-background {
+/* .movie-background {
   background: linear-gradient(to right, rgba(31.5, 31.5, 31.5, 1) 150px, rgba(31.5, 31.5, 31.5, 0.84) 100%), url(./assets/images/movie-background.jpg);
-}
+} */
 
 .movie-image {
   border-radius: 8px;
+  width: 100%;
+  object-fit: contain;
 }
 
 .name {
