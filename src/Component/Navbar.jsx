@@ -18,18 +18,16 @@ function Navbar() {
               <a className="nav-link" href="#" id="" role="button" data-bs-toggle="dropdown" aria-expanded="false">Movies</a>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <NavLink to="/popular" className="dropdown-item" href="#">Popular</NavLink>
-                <NavLink to="/popular" className="dropdown-item" href="#">Now Playing</NavLink>
-                <NavLink to="/popular" className="dropdown-item" href="#">Upcoming</NavLink>
-                <NavLink to="/popular" className="dropdown-item" href="#">Top Rated</NavLink>
+                <NavLink to="/nowplaying" className="dropdown-item" href="#">Now Playing</NavLink>
+                <NavLink to="/upcoming" className="dropdown-item" href="#">Upcoming</NavLink>
+                <NavLink to="/toprated" className="dropdown-item" href="#">Top Rated</NavLink>
               </ul>
             </li>
             <li className="nav-item dropdown">
               <a className="nav-link" href="#" id="" role="button" data-bs-toggle="dropdown" aria-expanded="false">TV shows</a>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <NavLink to="/popular" className="dropdown-item" href="#">Popular</NavLink>
-                <NavLink to="/popular" className="dropdown-item" href="#">Airing Today</NavLink>
-                <NavLink to="/popular" className="dropdown-item" href="#">On TV</NavLink>
-                <NavLink to="/popular" className="dropdown-item" href="#">Top Rated</NavLink>
+                <NavLink to="/toprated" className="dropdown-item" href="#">Top Rated</NavLink>
               </ul>
             </li>
             <li className="nav-item dropdown">

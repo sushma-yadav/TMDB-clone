@@ -11,7 +11,6 @@ function Popular() {
 
         axios.get(popularmovieUrl).then((res) => {
             setPopularList(res.data.results)
-            console.log(res.data.results, "res.data.results")
         })
 
 
@@ -35,36 +34,6 @@ function Popular() {
                                 )
                             })
                         }
-                        {/* <div className='card'>
-                            <img src={popularmovie} className="movie-card" />
-                            <h2 className='movie-name pt-3'>Sushma Yadav</h2>
-                            <p className='movie-date pb-3'>Sushma Yadav</p>
-                        </div>
-                        <div className='card'>
-                            <img src={popularmovie} className="movie-card" />
-                            <h2 className='movie-name pt-3'>Sushma Yadav</h2>
-                            <p className='movie-date pb-3'>Sushma Yadav</p>
-                        </div>
-                        <div className='card'>
-                            <img src={popularmovie} className="movie-card" />
-                            <h2 className='movie-name pt-3'>Sushma Yadav</h2>
-                            <p className='movie-date pb-3'>Sushma Yadav</p>
-                        </div>
-                        <div className='card'>
-                            <img src={popularmovie} className="movie-card" />
-                            <h2 className='movie-name pt-3'>Sushma Yadav</h2>
-                            <p className='movie-date pb-3'>Sushma Yadav</p>
-                        </div>
-                        <div className='card'>
-                            <img src={popularmovie} className="movie-card" />
-                            <h2 className='movie-name pt-3'>Sushma Yadav</h2>
-                            <p className='movie-date pb-3'>Sushma Yadav</p>
-                        </div>
-                        <div className='card'>
-                            <img src={popularmovie} className="movie-card" />
-                            <h2 className='movie-name pt-3'>Sushma Yadav</h2>
-                            <p className='movie-date pb-3'>Sushma Yadav</p>
-                        </div> */}
                     </div>
                 </div>
             </div>

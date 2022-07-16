@@ -14,12 +14,10 @@ const MovieDescription = () => {
 
 
   useEffect(() => {
-    // let movieUrl = 'https://api.themoviedb.org/3/movie/popular?api_key=1e945d2f421edc0fbe6217e79fefca15&language=en-US&page=1'
     let movieDetailURL = `https://api.themoviedb.org/3/movie/${id}?api_key=1e945d2f421edc0fbe6217e79fefca15`
 
     axios.get(movieDetailURL).then((res) => {
       setMovieOverview(res.data)
-      console.log(res.data, "res")
     })
 
 

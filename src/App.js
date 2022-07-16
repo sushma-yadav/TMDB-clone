@@ -17,6 +17,9 @@ function App() {
         <Route path="/moviedescription/:id" element={<MovieDescription />} />
         <Route path="/popularpeople" element={<PopularPeople />} />
         <Route path="/popular" element={<Popular />} />
+        <Route path="/upcoming" element={<Popular />} />
+        <Route path="/nowplaying" element={<Popular />} />
+        <Route path="/toprated" element={<Popular />} />
       </Routes>
       <Footer />
     </div>
