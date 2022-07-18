@@ -3,7 +3,6 @@ import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import movieimage from '../assets/images/movie-image.jpg';
 import Overview from './Overview';
 import SeriesCast from './SeriesCast';
 
