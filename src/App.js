@@ -7,6 +7,7 @@ import MovieDescription from './Component/MovieDescription';
 import PopularPeople from './Component/PopularPeople';
 import Popular from './Component/Popular';
 import UpComingMovies from './Component/UpcomingMovies';
+import TopRatedMovies from './Component/TopRatedMovies';
 
 function App() {
 
@@ -20,7 +21,7 @@ function App() {
         <Route path="/popular" element={<Popular />} />
         <Route path="/upcoming" element={<UpComingMovies />} />
         <Route path="/nowplaying" element={<Popular />} />
-        <Route path="/toprated" element={<Popular />} />
+        <Route path="/toprated" element={<TopRatedMovies />} />
       </Routes>
       <Footer />
     </div>

@@ -186,11 +186,6 @@ body a {
   font-size: 18px;
 }
 
-
-
-
-
-
 /*whats popular*/
 
 .mar-l {
@@ -477,4 +472,68 @@ body a {
   height: 100%;
   object-fit: contain;
   border-radius: 8px 8px 0 0;
+}
+
+
+/*---------------------------Media Query-------------------------------*/
+@media screen and (max-width: 320px) {
+  .footerlist {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .footerImage {
+    margin-bottom: 20px;
+    width: 45%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .category {
+    display: none;
+  }
+}
+
+@media screen and (min-width:425px) {
+
+  .footerImage {
+    margin-bottom: 20px;
+    width: 35%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .footerlist {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .footerlist h3 {
+    font-size: 14px;
+  }
+
+  .footerlist li {
+    font-size: 12px;
+  }
+
+  .category {
+    display: none;
+  }
+
+  .hero-tagline {
+    font-size: 16px;
+  }
+
+  .banner form input {
+    width: 100%;
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .search-btn {
+    padding: 6px 9px;
+    font-weight: 500;
+    font-size: 12px;
+  }
+
 }

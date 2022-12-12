@@ -8,7 +8,7 @@ function MovieCard({ data }) {
     return (
         <div className='card'>
             <img src={imgUrl + data.poster_path} className="movie-card" alt='' />
-            <h2 className='movie-name pt-3'>{data.original_title}</h2>
+            <h2 className='movie-name pt-3'>{data.original_title ? data.original_title : data.original_name}</h2>
             <p className='movie-date pb-3'>{moment(data.release_date).format("MMM DD, YYYY")}</p>
         </div>
     )

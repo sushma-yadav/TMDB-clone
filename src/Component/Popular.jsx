@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import MovieCard from './MovieCard';
+import { useNavigate } from 'react-router-dom';
 
 function Popular() {
 

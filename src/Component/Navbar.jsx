@@ -1,8 +1,17 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from '../assets/images/logo.png'
+import { useNavigate } from 'react-router-dom';
 
 function Navbar() {
+
+  const navigate = useNavigate()
+
+  const movieDetailHandler = (id) => {
+    navigate(`/popular/${id}`)
+  }
+
+
   return (
     <nav className="navbar navbar-expand-lg">
       <div className="container">
@@ -17,7 +26,9 @@ function Navbar() {
             <li className="nav-item dropdown">
               <a className="nav-link" href="#" id="" role="button" data-bs-toggle="dropdown" aria-expanded="false">Movies</a>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <NavLink to="/popular" className="dropdown-item" href="#">Popular</NavLink>
+                <NavLink to="/popular" className="dropdown-item" href="#"
+                // onClick={() => { movieDetailHandler() }}
+                >Popular</NavLink>
                 <NavLink to="/nowplaying" className="dropdown-item" href="#">Now Playing</NavLink>
                 <NavLink to="/upcoming" className="dropdown-item" href="#">Upcoming</NavLink>
                 <NavLink to="/toprated" className="dropdown-item" href="#">Top Rated</NavLink>
